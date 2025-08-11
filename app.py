@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon="📊",
 )
 
-# Add a title and description
+# Add a title and description test
 st.title("📊 Simple Data Visualization App")
 st.markdown("This is a simple Streamlit app that generates and visualizes random data.")
 
