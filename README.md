@@ -1,6 +1,6 @@
 # deploy_guide
 
-1. Create an IAM User for GitHub Actions
+# 1. Create an IAM User for GitHub Actions
 
 Go to AWS IAM console
 Create a new IAM user with programmatic access
@@ -12,7 +12,7 @@ AmazonEC2ContainerRegistryFullAccess
 
 Save the Access Key ID and Secret Access Key
 
-2. Create an ECR Repository
+# 2. Create an ECR Repository
 
 Go to AWS ECR console
 Click "Create repository"
@@ -20,7 +20,7 @@ Enter a name for your repository (e.g., "streamlit-app")
 Keep default settings and click "Create repository"
 Note the repository URI
 
-3. Launch an EC2 Instance
+# 3. Launch an EC2 Instance
 
 Go to EC2 console
 Launch a new EC2 instance:
@@ -39,7 +39,7 @@ Launch with a new key pair (save the .pem file)
 
 
 
-4. Create IAM Role for EC2
+# 4. Create IAM Role for EC2
 
 Go to IAM console
 Create a new role for EC2
@@ -50,7 +50,7 @@ AmazonECR-FullAccess (to pull images from ECR)
 
 Attach this role to your EC2 instance
 
-Step 5: Set Up GitHub Secrets
+# Step 5: Set Up GitHub Secrets
 In your GitHub repository:
 
 Go to Settings → Secrets → New repository secret
@@ -82,3 +82,18 @@ bashCopysudo ./svc.sh status
 
 
 Now your runner should be up and running! You can verify this by:
+
+
+
+# to copy and paste in terminal of ubuntu
+
+sudo apt-get update -y
+
+sudo apt-get upgrade
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+sudo usermod -aG docker ubuntu
+
+newgrp docker
