@@ -9,8 +9,8 @@ st.set_page_config(
     page_icon="📊",
 )
 
-# Add a title and description test
-st.title("📊 Simple Data Visualization App")
+# Add a title and description test 
+st.title("📊 Simple Data Visualization very sample App")
 st.markdown("This is a simple Streamlit app that generates and visualizes random data.")
 
 # Sidebar controls
